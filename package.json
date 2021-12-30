@@ -1,26 +1,16 @@
 {
-  "name": "etreeks",
-  "version": "0.1.0",
-  "private": false,
+  "name": "gyro-referrals",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --prod hosted-service --node https://api.thegraph.com/deploy/ --deploy-key $SUB_GRAPH_DEPLOY_KEY gyro-defi/gyro-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ gyro-defi/gyro-referrals",
+    "remove-local": "graph remove --node http://localhost:8020/ gyro-defi/gyro-referrals",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 gyro-defi/gyro-referrals"
   },
   "dependencies": {
-    "isotope-layout": "^3.0.6",
-    "moment": "^2.29.1",
-    "next": "12.0.1",
-    "react": "17.0.2",
-    "react-bootstrap": "^1.6.1",
-    "react-countup": "^6.0.0",
-    "react-dom": "17.0.2",
-    "react-visibility-sensor": "^5.1.1",
-    "swiper": "^7.2.0"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.1"
+    "@graphprotocol/graph-cli": "0.21.1",
+    "@graphprotocol/graph-ts": "0.20.0"
   }
 }
