@@ -15,12 +15,8 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
           </button>
-            <img src="img/pilogo.png" className="img-responsive" alt="" />
-          <a className='navbar-brand page-scroll' href='#page-top'>
-            Paideia
-          </a>{' '}
+            <img src="img/pilogo.png" className="img-responsive" alt="" /><a className='navbar-brand page-scroll' href='#page-top'>Paideia</a>{' '}
         </div>
-
         <div
           className='collapse navbar-collapse'
           id='bs-example-navbar-collapse-1'
