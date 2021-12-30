@@ -26,7 +26,7 @@ const About2 = () => {
                                 An enim nullam tempor sapien gravida donec porta
                                 and blandit ipsum enim justo integer velna vitae
                                 auctor integer congue magna and purus pretium
-                                risus ligula rutrum luctus ultrice
+                                risus ligula rutrum luctus ultric
                             </p>
                             {/* List */}
                             <ul className="txt-list mb-15">
