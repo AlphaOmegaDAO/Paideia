@@ -1,89 +1,211 @@
-# Change Log
 
-## [1.3.0] 2021-03-24
-### Bug fixing
-- Changed the way we import images
-  - Old way: `require("path/to/imgae")`
-  - New way: `require("path/to/imgae").default`
-### Major style changes
-### Deleted components
-### Added components
-### Deleted dependencies
-- `react-bootstrap-switch` (replaced by the simple Bootstrap Switch: https://reactstrap.github.io/components/form/#Custom-Inputs)
-### Added dependencies
-- `bootstrap@4.6.0`
-- `jquery@3.6.0` (Only to stop warnings from Bootstrap)
-### Updated dependencies
-```
-moment            2.26.0   →   2.29.1
-node-sass         4.14.1   →    5.0.0
-nouislider        14.5.0   →   14.6.4
-react            16.13.1   →   17.0.2
-react-datetime    2.16.3   →    3.0.4
-react-dom        16.13.1   →   17.0.2
-react-scripts      3.4.1   →    4.0.3
-reactstrap         8.4.1   →    8.9.0
-typescript         3.9.5   →    4.2.3
-```
-### Warning
-_When doing a clean install, you might have some warnings, those come from `node_modules` and do not affect the project in any way._
-_The following two error might occur while doing a clean install - They do not affect the product in any way:_
-_npm WARN react-datetime@3.0.4 requires a peer of react@^16.5.0 but none is installed. You must install peer dependencies yourself._
-_npm WARN @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.13.12 requires a peer of @babel/core@^7.13.0 but none is installed. You must install peer dependencies yourself._
+# Changelog
 
-## [1.2.0] 2020-06-12
-### Bug fixing
-- https://github.com/creativetimofficial/paper-kit-react/issues/2 (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-- Other Paper React products issues solved here as well
-  - https://github.com/creativetimofficial/ct-paper-kit-pro-react/issues/2
-  - https://github.com/creativetimofficial/paper-dashboard-react/issues/15
-  - https://github.com/creativetimofficial/paper-dashboard-react/issues/8
-  - https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/8
-  - https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/6 - solution to this is to change the usage of the ModalHeader from reactstrap to simple Bootstrap ones:
-  So, instead of:
-```
-<ModalHeader className="justify-content-center" toggle={this.toggleModalDemo}>
-    Modal Title
-</ModalHeader>
-```
-  You should use
-```
-<div className="modal-header justify-content-center">
-  <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.toggleModalDemo}>
-    <span aria-hidden="true">×</span>
-  </button>
-  <h5 className="modal-title">Modal Title</h5>
-</div>
-```
-### Major style changes
-- `src/assets/scss/paper-kit/_nucleo-outline.scss` (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-- `src/assets/scss/paper-kit/_nucleo-icons.scss` (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
-- `src/assets/scss/react/plugins/_plugin-nouislider.scss` (due to new `noUiSlider` API)
-### Deleted components
-### Added components
-### Deleted dependencies
-### Added dependencies
-+ gulp@4.0.2 (for Creative Tim copyrights)
-+ gulp-append-prepend@1.0.8 (for Creative Tim copyrights)
-### Updated dependencies
-```
-moment             2.24.0   →    2.26.0
-node-sass          4.12.0   →    4.14.1
-nouislider         13.1.5   →    14.5.0
-react              16.8.6   →   16.13.1
-react-dom          16.8.6   →   16.13.1
-react-router        5.0.1   →     5.2.0
-react-router-dom    5.0.1   →     5.2.0
-react-scripts       3.0.1   →     3.4.1
-reactstrap          8.0.0   →     8.4.1
-typescript          3.5.2   →     3.9.5
-```
-### Warning
-_All the following products: Paper Kit React, Paper Dashboard React, Paper Kit PRO React and Paper Dashboard PRO React have been updated together, and thus, we've added to all of them the same version of 1.2.0 - we may have skipped some versions for some of the above products, we've done so, since we want all Paper & React products to share the same versions._
-_While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
-_Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
+## Unreleased
 
-## [1.0.0] 2019-06-26
-### Original Release
-- Added Reactstrap as base framework
-- Added design from Paper Kit 2 by Creative Tim
+- Update dependencies
+
+## 4.0.7 2019-10-28
+
+- Add missing `heading` variant to `Heading` #754
+
+## 4.0.6 2019-09-21
+
+- Update dependencies
+- Add layout package
+- Add Slider and Switch to forms package
+
+## 4.0.5 2019-08-21
+
+- Fix publish
+
+## 4.0.4 2019-08-21
+
+- Add bundler setup & build for `@rebass/forms/styled-system`
+
+## 4.0.3 2019-08-18
+
+- Add forms package
+- Update dependencies
+
+## 4.0.2 2019-08-07
+## 4.0.1 2019-08-06
+
+- Fix ignore files
+- Adjust build
+- Update dependencies
+
+## 4.0.0 2019-08-04
+
+- New [`sx` prop](https://rebassjs.org/props/#sx-prop) for theme-based styles
+- Use the `css` prop for un-themed, raw CSS values
+- No additional Babel configuration required for the `sx` or `css` props
+- Use the `sx` prop in MDX documents
+- Built-in support for themeable component [variants](https://rebassjs.org/variants)
+- Fully compatible with [Theme UI](https://theme-ui.com)
+
+### Breaking Changes
+
+- The default package now uses Emotion. To use Rebass with Styled Components, import the components from `rebass/styled-components` instead.
+- The undocumented theme keys for `Box`, `Flex`, `Text`, `Heading`, `Link`, `Button`, `Image`, and `Card` are no longer supported. Use variants instead.
+- The `@rebass/grid` package has been renamed (back to) `reflexbox`
+- Heading: default `fontWeight` is now set to `heading`. Add styles to `theme.fontWeights` to customize the `heading` font weight.
+- Button no longer supports the following props. Use the `sx` prop instead.
+  `border`, `borderColor`, `borderWidth`, `borderStyle`, `borderRadius`, `borderTop`, `borderRight`, `borderBottom`, `borderLeft`, `borderX`, `borderY`
+- Image no longer supports the following props. Use the `sx` prop instead.
+  `border`, `borderColor`, `borderWidth`, `borderStyle`, `borderRadius`, `borderTop`, `borderRight`, `borderBottom`, `borderLeft`, `borderX`, `borderY`
+- Link no longer includes default styles. Add styles to `theme.variants.link` to customize link styles.
+- Card no longer supports the following props. Use the `sx` prop instead.
+  `border`, `borderColor`, `borderWidth`, `borderStyle`, `borderRadius`, `borderTop`, `borderRight`, `borderBottom`, `borderLeft`, `borderX`, `borderY`, `boxShadow`, `textShadow`, `background`, `backgroundImage`, `backgroundSize`, `backgroundPosition`, `backgroundRepeat`,
+
+
+## [3.1.0] 2019-03-23
+
+- Update to Styled System v4
+
+## [3.0.1] 2019-01-18
+
+- Update styled-system #555
+
+## [3.0.0] 2018-12-01
+
+- Reduced package size
+- Reduced number of components to 8
+- Updated for Styled Components v4 and Emotion v10
+- Reduced dependencies
+- Removed default theme and colors
+- Removed Provider component
+- Added variant theme support for Button and Card components
+- Removed `is` prop in favor of Styled Components' and Emotion's `as` prop
+- Uses Box component as base for all other components
+- Removed `css` prop in favor of Styled Components' and Emotion's implementations
+
+## [3.0.0-12] 2018-11-29
+
+- Removes `css` prop in favor of babel-plugin-styled-components
+- Adds build setup for Emotion 10
+
+## [3.0.0-11] 2018-11-13
+
+- Update dependencies
+
+## [3.0.0-10] 2018-11-12
+
+- Sets `box-sizing: border-box` on base Box component
+
+## [3.0.0-9] 2018-09-22
+
+- Adds flexbox props back to Box component
+
+## [3.0.0-6] 2018-09-13
+
+- Adds emotion package
+
+## [3.0.0-2] 2018-09-11
+
+- Update styled-system
+- Update docs
+
+## [3.0.0-1] 2018-09-10
+
+- Update docs for v3
+
+## [3.0.0-0] 2018-09-08
+
+- Smaller package
+- Reduced number of components to 8
+- Upgraded for styled-components v4
+- Reduced dependencies to one
+- Removed default theme and colors
+- Removed Rebass Provider component
+- Added variant theme support to Button and Card
+- Removed `is` prop in favor of styled-components `as` prop
+- Uses Box component as the base for all other components
+
+## [2.3.2] 2018-09-08
+
+- Update repo in package.json
+- Update readme
+
+## [2.3.1] 2018-09-08
+
+- Fix bad prepublish build
+
+## [2.3.0] 2018-09-08
+
+- Upgrade to @rebass/components, @rebass/grid, and styled-system v3
+
+## [2.2.0] 2018-09-08
+
+- Use `polished` for color manipulation instead of `chroma-js`
+
+## [2.1.1] 2018-09-08
+
+- Support `width` prop on Card
+- Update docs
+
+## [2.1.0] 2018-08-14
+
+- Add Hide component
+
+## [2.0.1] 2018-06-30
+
+- Add `fontFamily` to Heading and Text components
+- Update docs
+
+## [2.0.0] 2018-06-24
+
+### Added
+
+- Support for [emotion][emotion]
+
+### Changed
+
+- [styled-system](https://github.com/jxnblk/styled-system) v2
+- [grid-styled](https://github.com/jxnblk/grid-styled) v4
+- Moves components to separate modules
+- Uses [system-components](https://github.com/jxnblk/styled-system/tree/master/system-components)
+- Updates docs site
+
+#### Breaking
+
+- Renamed components
+  - TabItem -> Tab
+  - DotButton -> Dot
+  - PanelHeader -> Panel.Header
+  - PanelFooter -> Panel.Footer
+- Default theme (changed to match styled-system)
+  - The `colors` object no longer uses Palx
+  - Array color values have been removed
+  - `radius` has been replaced with `radii`
+  - `font` has been replaced with `fonts`
+  - `monospace` has been removed
+  - Theme fields are no longer exposed as exports
+- Props
+  - `width` is only available on Flex and Box
+  - `fontSize` is only available on typographic components
+  - `direction` is now `flexDirection`
+  - Flex `align` is now `alignItems`
+  - Flex `justify` is now `justifyContent`
+  - Flex `wrap` is now `flexWrap`
+  - Arrow `up` is now `direction='up'`
+  - `active` props have been removed in favor of custom styles
+  - Border now uses [styled-system border props](https://github.com/jxnblk/styled-system#borders)
+  - Banner `image` is now `backgroundImage`
+  - Absolute, Fixed, Relative, and Sticky now require values for `top`, `right`, `bottom`, and `left` props
+  - Drawer `position` prop has been renamed to `side`
+  - Drawer `size` prop has been replaced with `width` and `height` props
+
+### Removed
+
+- Custom HOC `hoc`
+- `createLibrary` function
+- `util`
+- `createComponent`
+- Palx dependency
+- ScrollCarousel component
+- CarouselSlide component
+- Star comonent
+
+
+[emotion]: https://github.com/emotion-js/emotion
