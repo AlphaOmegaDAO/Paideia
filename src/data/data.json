@@ -1,10 +1,10 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Paideia",
+    "paragraph": "Connecting students, educators and mentors worldwide with L2E and E2L."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Paideia is an educational blockchain, which provides free education, by using the Alpha and Omega DAOs as the treasury reserve model for bonding, staking and rewards of the Paideia stable coin called Pi. Originally envisioned for MOOCs, our platform has evolved to become the leading learning solutions for not only MOOCs, but self learners, YouTubers, Higher Ed, Enterprise, and Government Organizations alike.",
     "Why": [
       "Lorem ipsum dolor",
       "Tempor incididunt",
