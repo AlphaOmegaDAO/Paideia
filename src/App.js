@@ -1,23 +1,16 @@
-import React,{Component} from 'react';
-import Navbar from './components/Navbar';
-import {BrowserRouter, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import About from './components/About';
-class App extends Component{
-	render(){	
-		return (
-			<BrowserRouter>
-				<div className="App">
-					<Navbar />
-					<Route exact path="/" component={Home}/>
-					<Route path="/about" component={About}/>
-					<Route path="/contact" component={Contact}/>
+import React from 'react';
+import Clover from './Clover';
 
-				</div>
-			</BrowserRouter>
-		);
-	}
+/*This file App.js is called my root component*/
+function App() {
+  return (
+         <div className="App">
+            <h1>My First React App</h1>
+            <p>Learn to love 746867 like 63526</p>
+	  	<Clover name= "Pintos Lover" major="C Architecture" favLang="Pascal"/>
+	  	<Clover name="Assembly Lover" major="Low Level Languages" favLang="Assembly" />
+         </div>
+  );
 }
 
 export default App;
